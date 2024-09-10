@@ -1,0 +1,307 @@
+@font-face {
+    font-family: jk;
+    src: url("./StylishCalligraphyDemo-XPZZ.ttf");
+}
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+body {
+    background-color: #121212;
+    color: #ffffff;
+    display: flex;
+    flex-direction: row;
+}
+
+
+
+/* Sidebar */
+.sidebar {
+    width: 230px;
+    background-color: #000000;
+    padding-top: 10px; 
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    
+    border-right: 1px solid #262626;
+    border-radius: 2px;
+}
+
+.sidebar ul {
+    list-style-type: none;
+    padding: 0; 
+    margin: 0px;
+}
+
+.sidebar ul li.logo h1 {
+    font-family: 'jk'; /*the custom font name */
+    font-size: 26px;
+    color: #ffffff;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.sidebar ul li {
+    padding: 10px 15px;
+    display: flex;
+    align-items: center;
+    color: #ffffff;
+    cursor: pointer;
+    transition: background-color 1s;
+    font-size: 17px;
+    border-radius: 30px; /* Rounded corners */
+    margin-bottom: 15px; /* Space between items (home and search) */
+}
+
+.sidebar ul li img {
+    width: 24px;
+    height: 24px;
+    margin-right: 10px;
+    
+}
+
+.sidebar ul li:hover {
+    background-color: #262626;
+}
+
+.sidebar .divider {
+    border-bottom: 1px solid #383838;
+    margin: 10px 20px;
+}
+
+.you ul {
+    margin-top: 20px;
+}
+
+.you ul li {
+    padding: 10px 15px;
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+}
+
+
+
+
+
+/* Main Content */
+.content-wrapper {
+    display: flex;
+    flex-direction: column;
+    margin-left: 260px; /* Sidebar width + some margin */
+    padding: 20px;
+    width: calc(100% - 480px); /* Full width minus sidebar and right sidebar */
+    overflow-y: auto;
+}
+
+
+
+/* Stories Section */
+.stories {
+    display: flex;
+    overflow-x: scroll;
+    margin-bottom: 20px;
+
+    
+    /* scrollbar-width: null; */
+    
+
+}
+
+.story {
+    margin-right: 10px;
+    text-align: center;
+    
+}
+
+.story img {
+    width: 59px;
+    height: 59px;
+    border-radius: 50%;
+    border: 3px solid #09b0ad; /* Instagram gradient border */
+    padding: 2px;
+}
+
+.story p {
+    margin-top: 5px;
+    font-size: 15px;
+    
+    display:  none;
+}
+
+
+
+/* Post Section */
+.post {
+    background-color: #1c1c1c;
+    border-radius: 12px;
+    padding: 15px;
+    margin-bottom: 20px;
+}
+
+.post-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.post-profile-img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.post-username {
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+.post-time {
+    font-size: 12px;
+    color: #aaaaaa;
+}
+
+.post-image img {
+    width: 100%;
+    border-radius: 12px;
+}
+
+.post-info {
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+
+
+/* video */
+
+.post-video video {
+    width: 100%;
+    border-radius: 12px;
+    outline: none; /* Remove default video outline */
+}
+
+
+   /* Add Icons Section  */
+
+.post-icons {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.icon {
+    width: 24px;
+    height: 24px;
+    margin-right: 15px;
+    cursor: pointer;
+
+    /* filter: brightness(0) invert(1)*/  /*Make icons white */
+    
+}
+
+.icon:hover {
+    opacity: 0.7;
+    transition: opacity 0.2s ease-in-out;
+}
+
+
+
+.bookmark-icon {
+    margin-left: auto; 
+}
+
+/* Right Sidebar */
+.right-sidebar {
+    width: 220px;
+    background-color: #000000;
+    padding: 20px;
+    position: fixed;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    overflow-y: auto;
+    border-left: 1px solid #262626;
+}
+
+.profile-info {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.profile-pic {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.profile-details {
+    display: flex;
+    flex-direction: column;
+}
+
+.profile-username {
+    font-weight: bold;
+}
+
+.profile-name {
+    font-size: 12px;
+    color: #aaaaaa;
+}
+
+
+/* Suggestions */
+
+.suggestions h3 {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+
+.suggestion {
+    align-items: center;
+    
+}
+
+.suggestion img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.suggestion-details {
+    display: flex;
+    flex-direction: column;
+}
+
+.suggestion-username {
+    font-weight: bold;
+}
+
+.suggestion-relation {
+    font-size: 12px;
+    color: #aaaaaa;
+}
+
+.follow-btn {
+    margin-top: 5px;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 12px;
+    background-color: #0095f6;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.follow-btn:hover {
+    background-color: #09151c;
+}
